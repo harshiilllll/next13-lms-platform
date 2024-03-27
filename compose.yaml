@@ -1,0 +1,11 @@
+services: 
+  db:
+    image: postgres:13-alpine
+    environment:
+      - POSTGRES_DB
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+    ports:
+      - ${DB_PORT}:5432
+    env_file:
+      - .env
